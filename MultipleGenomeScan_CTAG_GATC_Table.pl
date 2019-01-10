@@ -33,9 +33,9 @@ while(defined($my_genome=glob("*.fna")))
 	open (IN, "< $my_genome") or die "cannot open $my_genome:$!";
 
 	# several tab delimited files are created per genome 
-	$out1=$my_genome.".CTAG_GATC_location";
-	$out2=$my_genome.".CTAG_GATC_cummulative";
-	$out3=$my_genome.".CTAG_GATC_window";
+	$out1=$my_genome.".CTAG_GATC_location.txt";
+	$out2=$my_genome.".CTAG_GATC_cummulative.txt";
+	$out3=$my_genome.".CTAG_GATC_window.txt";
 	$out4=$my_genome.".genome.1line";
 
 
@@ -105,8 +105,8 @@ while(defined($my_genome=glob("*.fna")))
 						
 							}						
 						
-
-	 if ($i%2000==0) {
+# you can change the window size in the following line.  Replace the 1000 with the desired window size 
+	 if ($i%1000==0) {
 	  print OUT2 "$i\t$CTAG_cum\t$GATC_cum\n";
 	  print OUT3 "$i\t$CTAG_window\t$GATC_window\n";
 	
