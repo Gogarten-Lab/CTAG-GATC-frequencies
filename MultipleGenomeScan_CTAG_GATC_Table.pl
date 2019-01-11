@@ -13,7 +13,7 @@ $GATC_location =0;
 $GATC_cum=0;
 $GATC_window=0;
 
-open (OUT5, ">mytable.csv" ); # the table contains the cumulative motif frequencies
+open (OUT5, ">mytable.txt" ); # the table contains the cumulative motif frequencies
 #assign genome name to $my_genome
 while(defined($my_genome=glob("*.fna")))
 	{
