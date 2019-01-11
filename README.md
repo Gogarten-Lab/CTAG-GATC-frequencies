@@ -9,8 +9,10 @@ To invoke the script move to the dirctory and type "perl MultipleGenomeScan_CTAG
 The script will generate several files per genome (or rather .fna file).
 These include file that give the location of each CTAG and GATC oligo "*.CTAG_GATC_location.txt", 
 a cumulative distribution for each type "*.CTAG_GATC_cummulative.txt",
-the frequency of the motifs in each window "*.CTAG_GATC_window.txt", 
+the frequency of the motifs in each window "CTAG_GATC_window.txt", 
 and a file containg the genome in a single line (i.e. with out returns and spaces).  
 The tables can be loaded into excel (for further manipulation, eg, create a rolling window), 
 or plotted directly using gnuplot. 
-The window size can be modifies in line 109 of the script.  
+The window size can be modifies in line 109 of the script.
+
+The script also generates a summary tab separated table ("mytable.txt") giving the total number and frequencies for each motif for each genome.   
